@@ -10,7 +10,6 @@ const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
-    owner: "Pittala Sandeep",
     geometry: {
       type: "Point",
       coordinates: [-118.7798, 34.0259]
