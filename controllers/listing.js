@@ -36,6 +36,7 @@ module.exports.createListing = async (req, res, next) => {
      })
      .send()
 
+     
     let url = req.file.path;
     let filename = req.file.filename;
     const newListing = new Listing(req.body.listing)
@@ -43,7 +44,6 @@ module.exports.createListing = async (req, res, next) => {
     newListing.image = {url, filename}
     newListing.geometry = response.body.features[0].geometry
     let result = await newListing.save()
-    console.log(result)
     req.flash("success", "New listing is added");
     res.redirect("/listing")
 }
